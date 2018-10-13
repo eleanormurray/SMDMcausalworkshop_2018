@@ -368,6 +368,7 @@ wt_check_fxn <- function(x, d){
                    Q.99 = quantile(x, p=0.99),
                    Q.995 = quantile(x, p=0.995),
                    Max = max(x, na.rm=T), digits=d)
+        )
 }
 wt_check_fxn(placebo$stabw, 3)
 wt_check_fxn(placebo$unstabw, 3)
