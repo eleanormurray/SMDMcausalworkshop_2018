@@ -473,6 +473,7 @@ wideres$RD <- wideres$Adherers - wideres$Nonadherers
 wideres$logRatio <- log(wideres$Adherers) / log(wideres$Nonadherers)
 wideres$logRatio[1] <- NA
 wideres$cHR <- sapply(0:15, FUN=function(x){mean(wideres$logRatio[wideres$visit <= x], na.rm=T)})
+wideres
 
 # Overall Hazard Ratio
 wideres$cHR[wideres$visit==15]
