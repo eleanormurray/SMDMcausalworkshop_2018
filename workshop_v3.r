@@ -378,7 +378,7 @@ threshold <- quantile(placebo$stabw, 0.99) # Here we chose 99th %tile
 placebo$stabw_t <- placebo$stabw
 placebo$stabw_t[placebo$stabw > threshold] <- threshold
 
-wt_check_fxn(placebo$stabw_t)
+wt_check_fxn(placebo$stabw_t, 3)
 
 # Code Section 7 - Weighted Conditional Hazard Ratios ---------------------
 
