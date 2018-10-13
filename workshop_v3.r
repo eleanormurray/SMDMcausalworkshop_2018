@@ -392,7 +392,7 @@ plrFit_SWT <- glm(death ~ visit + visit2 + adhr_b +
                   data=placebo[placebo$visit <= placebo$maxVisit,],
                   weights = stabw_t,
                   family=quasibinomial())
-coeftest(plrFit_SWT, vcov=vcovHC(plr_fit, type="HC1")) # To get robust SE estimates
+coeftest(plrFit_SWT, vcov=vcovHC(plrFit_SWT, type="HC1")) # To get robust SE estimates
 exp(coef(plrFit_SWT)) # to get Hazard Ratios
 
 # Try changing "weights = stabw_t, " to 
